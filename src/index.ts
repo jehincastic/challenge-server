@@ -15,7 +15,6 @@ dotenv.config();
 
 import {
   COOKIE_NAME,
-  __prod__,
   COOKIE_SECRET,
   COOKIE_AGE,
   PORT,
@@ -53,8 +52,6 @@ const main = async () => {
     cookie: {
       maxAge: COOKIE_AGE,
       httpOnly: true,
-      sameSite: 'lax',
-      secure: __prod__,
     },
   }));
 
